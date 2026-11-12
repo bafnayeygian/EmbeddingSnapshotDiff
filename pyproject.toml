@@ -1,0 +1,17 @@
+[build-system]
+requires=["setuptools>=68","wheel"]
+build-backend="setuptools.build_meta"
+
+[project]
+name="embeddingsnapshotdiff"
+version="1.0.0"
+description="Compare embedding snapshots by IDs, dimensions, vector norms, cosine similarity, and missing records to catch indexing regressions."
+readme="README.md"
+requires-python=">=3.9"
+license={text="MIT"}
+
+[project.scripts]
+embedding-snapshot-diff="embedding_snapshot_diff.cli:main"
+
+[tool.setuptools.packages.find]
+where=["src"]
